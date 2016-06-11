@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  background-color: #22A7F0;
+}
+
+h1, p, span {
+  font-family: 'Montserrat', sans-serif;
+  color: #ecf0f1;
+}
+
+.hero-text h1{
+  font-size: 6em;
+  font-family:'Chewy', cursive;
+  font-weight: 700;
+}
+
+.hero-text p{
+  font-family: 'Crafty Girls', cursive;
+  font-size: 1.5em;
+}
+
+.page-wrapper{
+  margin: auto auto;
+}
+
+.inner-wrap{
+  padding-top: 90px;
+}
+
+.hero-text{
+  text-align: center;
+}
+
+.slogan{ 
+  padding-top: 75px;
+  padding-bottom: 15px;
+}
+
+.input-group-btn button{
+  background-color: #FD4569;
+}
+
+.form-control{
+  -webkit-box-shadow: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.form-control:focus{
+  border-color: #fff;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "A URL shortener that uses node, JQuery, and PostgreSQL, and express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "electrostaticfleece",
+  "license": "ISC"
+}
