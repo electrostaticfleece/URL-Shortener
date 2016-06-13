@@ -17,7 +17,7 @@ $('.btn-short').on('click', function(){
         store = '#22A7F0';
       }
 
-      output = '<span>' + text + '<a class="result" target="_blank" href=http://"' + data.shortURL + '">' 
+      output = '<span>' + text + '<a class="result" target="_blank" href="http://' + data.shortURL + '">' 
           + data.shortURL + '</a></span>';
 
       $('#rtn-link').html(output);
