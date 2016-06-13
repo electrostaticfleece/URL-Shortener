@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Babify URL Shortener</title>
+  <title>Babify - The tiny URL Shortener</title>
   <meta name="description" content="A URL Shortener using PostgreSQL, Node, Express, Bootstrap, and jQuery.">
   <meta name="author" content="electrostaticfleece">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,9 +35,9 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Honey... I shrunk the url!">
+            <input type="text" id="url-input" class="form-control" placeholder="Honey... I shrunk the url!">
             <span class="input-group-btn">
-              <button class="btn btn-secondary" type="button">
+              <button class="btn btn-secondary btn-short" type="button">
                 <span>Babify Me!</span>
               </button>
             </span>
@@ -55,7 +55,9 @@
 </div>
 
 <!-- Latest compiled and minified JavaScript for Bootstrap -->
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="javascript/short.js"></script>
 </body>
 
 </html>
