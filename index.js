@@ -29,6 +29,7 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'views/index.html'))
 });
 
+
 app.post('/api/baby', function(req, res){
 
   let longUrl = req.body.url,
@@ -49,10 +50,11 @@ app.post('/api/baby', function(req, res){
       if(err){ 
         return rollback(client, done); 
       }
-
+      console.log('working');
       //If a match is found set the value to shortUrl
       if(result.rows.length){
         shortUrl = base + '/' + encode.encode(result.rows[0].id);
+        console.log(shortUrl);
       } else {
 
           //If a match is not found insert the url into the database
@@ -64,10 +66,9 @@ app.post('/api/baby', function(req, res){
             //Once the query has been inserted into the database, get and return the last id as a short URL;
             client.query("SELECT id FROM urls ORDER BY id DESC LIMIT 1", function(err, result){
               if(err){
-              return rollback(client, done); 
+                return rollback(client, done); 
               }
               shortUrl = base + '/' + encode.encode(result.rows[0].id);
-              console.log('The short URL is ' + shortUrl);
               return res.send({'shortURL': shortUrl})
             });
 
@@ -89,6 +90,8 @@ app.post('/api/baby', function(req, res){
   });
 
 });
+
+
 
 app.get('/:encoded_id', function(req, res){
 
@@ -120,6 +123,7 @@ app.get('/:encoded_id', function(req, res){
   });
 
 });
+
 
 let server = app.listen(port, function(){
   console.log('Server is now listening on port: ' + port);
