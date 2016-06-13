@@ -36,11 +36,7 @@ app.post('/api/baby', function(req, res){
       base = req.headers.host,
       shortUrl;
       
-  if(!/^(http:\/\/)/.test(longUrl)){
-          longUrl = 'http://' + longUrl;
-  }
-
-  if(!/^(http:\/\/)/.test(longUrl)){
+  if(!/^(http)/.test(longUrl)){
           longUrl = 'http://' + longUrl;
   }
 
