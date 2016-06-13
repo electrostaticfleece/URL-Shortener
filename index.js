@@ -35,6 +35,10 @@ app.post('/api/baby', function(req, res){
   let longUrl = req.body.url,
       base = req.headers.host,
       shortUrl;
+      
+  if(!/^(http:\/\/)/.test(longUrl)){
+          longUrl = 'http://' + longUrl;
+  }
 
   pg.connect(connectionString, function(err, client, done){
 
