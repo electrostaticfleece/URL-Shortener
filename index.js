@@ -54,11 +54,10 @@ app.post('/api/baby', function(req, res){
       if(err){ 
         return rollback(client, done); 
       }
-      console.log('working');
+        
       //If a match is found set the value to shortUrl
       if(result.rows.length){
         shortUrl = base + '/' + encode.encode(result.rows[0].id);
-        console.log(shortUrl);
       } else {
 
           //If a match is not found insert the url into the database
